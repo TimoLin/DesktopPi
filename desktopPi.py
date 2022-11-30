@@ -114,7 +114,7 @@ class guiForm(QtWidgets.QWidget, Ui_Form):
         '''
 
         [totStars,totlCommits, totPrs, totIssues, totRepos] = self.gh.ghGetStat()
-        print(totRepos,totlCommits,totPrs,totIssues,totRepos)
+        #print(totRepos,totlCommits,totPrs,totIssues,totRepos)
 
         self.ghStars.setText(str(totStars))
         self.ghCommits.setText(str(totlCommits))

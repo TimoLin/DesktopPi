@@ -7,10 +7,11 @@ import os
 
 class dailyCheck():
     def __init__(self):
+
         cfg = configparser.ConfigParser()
         cfgPath = os.path.dirname(os.path.abspath(__file__)) + os.path.sep+ "config.ini"
         cfg.read(cfgPath)
-        print(cfgPath)
+
         self.fname = cfg['DEFAULT']['DC_FULL_PATH']
         self.url = cfg['DEFAULT']['URL']
         self.imgPath = os.path.dirname(os.path.abspath(__file__)) + os.path.sep + "QRCode.png"
