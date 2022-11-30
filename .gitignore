@@ -1,0 +1,8 @@
+# Editor
+*.swp
+
+# Python cache
+__pycache__/
+
+# Personal config file
+config.ini
