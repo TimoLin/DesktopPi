@@ -57,7 +57,8 @@ class guiForm(QtWidgets.QWidget, Ui_Form):
     def getSystemStat(self):
         '''Get system CPU/RAM usage using psutil
         '''
-        cpuTemperature = psutil.sensors_temperatures()['coretemp'][0].current
+        keys = list(psutil.sensors_temperatures().keys())
+        cpuTemperature = psutil.sensors_temperatures()[keys[0]][0].current
         cpuPercent = psutil.cpu_percent()
         ramPercent = psutil.virtual_memory().percent
     
