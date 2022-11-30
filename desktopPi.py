@@ -30,7 +30,7 @@ class guiForm(QtWidgets.QWidget, Ui_Form):
         # Update CPU/Ram infomation every 1000 ms
         self.timer_systemStat = QtCore.QTimer()
         self.timer_systemStat.timeout.connect(self.getSystemStat)
-        self.timer_systemStat.start(1000)
+        self.timer_systemStat.start(10000)
 
         # Update github status
         self.gh = ghStats()
