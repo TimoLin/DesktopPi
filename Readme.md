@@ -42,3 +42,10 @@ python desktopPi.py
 ## Demo
 ![Selection_002](https://user-images.githubusercontent.com/7792396/204963215-f64dc6c8-2680-4a54-a94b-a0fcef4c4c2b.png)
 
+## Acknowledgement
+The CPU/RAM's UI design and PyQt code are adapted from [earthinversion/SystemMonitorApp](https://github.com/earthinversion/SystemMonitorApp.git) (MIT License).  
+
+Thermo icon was taken from [xiaoyou-bilibili/pi_tool](https://github.com/xiaoyou-bilibili/pi_tool.git).  
+
+Others used [Alibaba Iconfont](https://www.iconfont.cn/).
+

@@ -1,5 +1,5 @@
 # 2022/11/29 21:22:27  zt
-# Raspberry Pi Desktop
+# Raspberry Pi Desktop toy
 
 import sys
 import os
@@ -82,6 +82,7 @@ class guiForm(QtWidgets.QWidget, Ui_Form):
 
     def getSystemStat(self):
         '''Get system CPU/RAM usage using psutil
+        Adapted from https://github.com/earthinversion/SystemMonitorApp.git (MIT License)
         '''
         keys = list(psutil.sensors_temperatures().keys())
         cpuTemperature = psutil.sensors_temperatures()[keys[0]][0].current
@@ -93,8 +94,10 @@ class guiForm(QtWidgets.QWidget, Ui_Form):
         self.cpuTemp.setText(str(cpuTemperature))
         time.sleep(1)
     
-    
     def setValue(self, value, labelPercentage, progressBarName, color):
+        '''Set CPU/Ram usage value
+        Adapted from https://github.com/earthinversion/SystemMonitorApp.git (MIT License)
+        '''
     
         sliderValue = value
     
@@ -107,8 +110,11 @@ class guiForm(QtWidgets.QWidget, Ui_Form):
         self.progressBarValue(sliderValue, progressBarName, color)
     
     def progressBarValue(self, value, widget, color):
+        '''Set CPU/Ram usage circular progress value
+        Adapted from https://github.com/earthinversion/SystemMonitorApp.git (MIT License)
+        '''
     
-        # PROGRESSBAR STYLESHEET BASE
+        # Progressbar stylesheet base
         styleSheet = """
         QFrame{
         	border-radius: 37px;
