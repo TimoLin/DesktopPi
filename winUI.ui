@@ -2,6 +2,12 @@
 <ui version="4.0">
  <class>Form</class>
  <widget class="QWidget" name="Form">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -12,6 +18,9 @@
   </property>
   <property name="windowTitle">
    <string>Form</string>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
   </property>
   <widget class="Line" name="line">
    <property name="geometry">
@@ -328,7 +337,7 @@ color: white;</string>
     </rect>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/temperature/temperature.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/github/temperature.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="cpuTemp">
@@ -661,6 +670,26 @@ color: white;</string>
     </property>
    </widget>
   </widget>
+  <widget class="QPushButton" name="closeBtn">
+   <property name="geometry">
+    <rect>
+     <x>462</x>
+     <y>0</y>
+     <width>16</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="res/icons.qrc">
+     <normaloff>:/github/close.png</normaloff>:/github/close.png</iconset>
+   </property>
+  </widget>
  </widget>
  <resources>
   <include location="res/icons.qrc"/>
@@ -675,6 +704,22 @@ color: white;</string>
     <hint type="sourcelabel">
      <x>375</x>
      <y>280</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>158</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>closeBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>469</x>
+     <y>7</y>
     </hint>
     <hint type="destinationlabel">
      <x>239</x>

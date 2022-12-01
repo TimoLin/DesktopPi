@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="github">
+    <file>git-star.png</file>
+    <file>close.png</file>
+    <file>git-pr.png</file>
+    <file>git-issue.png</file>
+    <file>git-repo.png</file>
+    <file>git-commit.png</file>
+    <file>temperature.png</file>
+    <file>humidity.png</file>
+    <file>GitHub-Mark-32px.png</file>
+  </qresource>
+</RCC>

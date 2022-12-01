@@ -6,7 +6,7 @@ import os
 
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtCore import QObject, pyqtSignal
+from PyQt5.QtCore import QObject, pyqtSignal,Qt
 from winUI import Ui_Form
 
 import psutil
@@ -21,6 +21,7 @@ class guiForm(QtWidgets.QWidget, Ui_Form):
         super(guiForm,self).__init__(parent)
         self.setupUi(self)
         self.retranslateUi(self)
+        self.setWindowFlags(Qt.FramelessWindowHint|self.windowFlags())
 
         # Update clock
         self.timer_clock = QtCore.QTimer()
@@ -30,7 +31,7 @@ class guiForm(QtWidgets.QWidget, Ui_Form):
         # Update CPU/Ram infomation every 1000 ms
         self.timer_systemStat = QtCore.QTimer()
         self.timer_systemStat.timeout.connect(self.getSystemStat)
-        self.timer_systemStat.start(10000)
+        self.timer_systemStat.start(2000)
 
         # Update github status
         self.gh = ghStats()
@@ -45,7 +46,32 @@ class guiForm(QtWidgets.QWidget, Ui_Form):
         self.timer_dc = QtCore.QTimer()
         self.timer_dc.timeout.connect(self.updateDailyCheck)
         self.timer_dc.start(2*3600*1000)
+
+    def mousePressEvent(self, evt):
+        '''Re-write mouse press event
+        '''
+        # Get mouse location
+        self.mouse_x = evt.globalX()
+        self.mouse_y = evt.globalY()
+
+        # Get current window form location
+        self.origin_x = self.x()
+        self.origin_y = self.y()
+
+
+    def mouseMoveEvent(self, evt):
+        '''Re-write mouse movement event
+        '''
+        # Calculate mouse movement dX, dY
+        move_x = evt.globalX() - self.mouse_x
+        move_y = evt.globalY() - self.mouse_y
     
+        # Calculate window form new loation
+        dest_x = self.origin_x + move_x
+        dest_y = self.origin_y + move_y
+    
+        # Move window form to new location
+        self.move(dest_x, dest_y)   
 
     def updateClock(self):
         '''Show current time
