@@ -2,6 +2,9 @@
   <qresource prefix="github">
     <file>git-star.png</file>
     <file>close.png</file>
+    <file>university.png</file>
+    <file>phd.png</file>
+    <file>location.png</file>
     <file>git-pr.png</file>
     <file>git-issue.png</file>
     <file>git-repo.png</file>

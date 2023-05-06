@@ -13,7 +13,7 @@ import psutil
 import time
 
 from githubStatistic import *
-from dailyCheck import *
+from cfdJobs import *
 
 class guiForm(QtWidgets.QWidget, Ui_Form):
     
@@ -41,10 +41,10 @@ class guiForm(QtWidgets.QWidget, Ui_Form):
         self.timer_ghStat.start(10*3600*1000)
 
         # Update daily check status
-        self.dc = dailyCheck()
-        self.updateDailyCheck()
+        self.cjs = cfdJobs()
+        self.updateJobs()
         self.timer_dc = QtCore.QTimer()
-        self.timer_dc.timeout.connect(self.updateDailyCheck)
+        self.timer_dc.timeout.connect(self.updateJobs)
         self.timer_dc.start(2*3600*1000)
 
     def mousePressEvent(self, evt):
@@ -157,15 +157,13 @@ class guiForm(QtWidgets.QWidget, Ui_Form):
 
         return
 
-    def updateDailyCheck(self):
-        '''Update Covid Daily Check status
+    def updateJobs(self):
+        '''Update PostDoc positions from cfd-online
         '''
-        if ( self.dc.checkDC() ):
-            self.dailyCheckStatus.setText("Success!")
-            self.dailyCheckStatus.setStyleSheet("background-color: rgb(78, 154, 6); color: white;")
-        else:
-            self.dailyCheckStatus.setText("Failed!")
-            self.dailyCheckStatus.setStyleSheet("background-color: rgb(239, 41, 41); color: white;")
+        status = self.cjs.checkUpdate()
+        self.postDocPosition.setText(self.cjs.titles[0])
+        self.postDocUniversity.setText(self.cjs.employers[0])
+        self.postDocLocation.setText(self.cjs.locations[0])
 
     def callGenQRCode(self):
         '''Call QR Code generator

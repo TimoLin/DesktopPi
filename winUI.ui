@@ -283,48 +283,14 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>300</x>
+     <x>250</x>
      <y>110</y>
-     <width>151</width>
+     <width>211</width>
      <height>30</height>
     </rect>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600; color:#2d7db3;&quot;&gt;Daily Check&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="dailyCheckStatus">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>180</y>
-     <width>131</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(78, 154, 6);
-color: white;</string>
-   </property>
-   <property name="text">
-    <string>Done</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="genQRCode">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>260</y>
-     <width>131</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 110, 0);
-color: white;</string>
-   </property>
-   <property name="text">
-    <string>QR Code</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600; color:#2d7db3;&quot;&gt;PostDoc Positions&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_5">
@@ -369,7 +335,7 @@ color: white;</string>
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>50</x>
+     <x>30</x>
      <y>110</y>
      <width>193</width>
      <height>34</height>
@@ -398,7 +364,7 @@ color: white;</string>
   <widget class="QFrame" name="frame">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>20</x>
      <y>150</y>
      <width>221</width>
      <height>32</height>
@@ -453,7 +419,7 @@ color: white;</string>
   <widget class="QFrame" name="frame_2">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>20</x>
      <y>183</y>
      <width>221</width>
      <height>32</height>
@@ -508,7 +474,7 @@ color: white;</string>
   <widget class="QFrame" name="frame_3">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>20</x>
      <y>216</y>
      <width>221</width>
      <height>32</height>
@@ -563,7 +529,7 @@ color: white;</string>
   <widget class="QFrame" name="frame_4">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>20</x>
      <y>249</y>
      <width>221</width>
      <height>32</height>
@@ -618,7 +584,7 @@ color: white;</string>
   <widget class="QFrame" name="frame_5">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>20</x>
      <y>282</y>
      <width>221</width>
      <height>32</height>
@@ -690,27 +656,129 @@ color: white;</string>
      <normaloff>:/github/close.png</normaloff>:/github/close.png</iconset>
    </property>
   </widget>
+  <widget class="QLabel" name="label_17">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>150</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/github/phd.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_18">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>220</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/github/university.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_19">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>270</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/github/location.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="postDocPosition">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>150</y>
+     <width>171</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Phd Position</string>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignJustify|Qt::AlignTop</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="postDocUniversity">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>220</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>University</string>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="postDocLocation">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>270</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Location</string>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="Line" name="line_2">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>120</y>
+     <width>20</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
  </widget>
  <resources>
   <include location="res/icons.qrc"/>
  </resources>
  <connections>
-  <connection>
-   <sender>genQRCode</sender>
-   <signal>clicked()</signal>
-   <receiver>Form</receiver>
-   <slot>callGenQRCode()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>375</x>
-     <y>280</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>239</x>
-     <y>158</y>
-    </hint>
-   </hints>
-  </connection>
   <connection>
    <sender>closeBtn</sender>
    <signal>clicked()</signal>
