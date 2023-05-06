@@ -3,11 +3,14 @@
 from github import Github, GithubException
 
 import configparser
+import os
 
 class ghStats():
     def __init__(self):
         cfg = configparser.ConfigParser()
-        cfg.read('config.ini')
+        # Get script absolute path
+        cfgPath = os.path.dirname(os.path.abspath(__file__))+os.path.sep+"config.ini"
+        cfg.read(cfgPath)
         self.gh = Github(cfg['DEFAULT']['GH_TOKEN'])
 
     def ghGetStat(self):

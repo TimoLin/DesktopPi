@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import configparser
+import os
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
@@ -10,7 +11,9 @@ class cfdJobs():
     def __init__(self):
         # Read user-defined url from config file
         cfg = configparser.RawConfigParser()
-        cfg.read('config.ini')
+        # Get script absolute path
+        cfgPath = os.path.dirname(os.path.abspath(__file__))+os.path.sep+"config.ini"
+        cfg.read(cfgPath)
         self.url = cfg['DEFAULT']['URL']
 
         self.titles = []
