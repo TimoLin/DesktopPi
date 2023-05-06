@@ -40,7 +40,7 @@ python desktopPi.py
 ```
 
 ## Demo
-![Selection_002](https://user-images.githubusercontent.com/7792396/204963215-f64dc6c8-2680-4a54-a94b-a0fcef4c4c2b.png)
+![May-06-20:13-36](https://user-images.githubusercontent.com/7792396/236623411-91aac2ff-78cb-44dd-8530-1f960a6cef1e.png)
 
 ## Acknowledgement
 The CPU/RAM's UI design and PyQt code are adapted from [earthinversion/SystemMonitorApp](https://github.com/earthinversion/SystemMonitorApp.git) (MIT License).  
