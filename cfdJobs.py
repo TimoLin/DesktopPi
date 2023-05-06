@@ -1,8 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-
-urlBase  = "https://www.cfd-online.com/Jobs/listjobs.php?category="
-category = "PostDoc%20Position"
+import configparser
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
@@ -10,8 +8,11 @@ headers = {
 
 class cfdJobs():
     def __init__(self):
-        self.url = urlBase+category
-        self.headers = headers
+        # Read user-defined url from config file
+        cfg = configparser.RawConfigParser()
+        cfg.read('config.ini')
+        self.url = cfg['DEFAULT']['URL']
+
         self.titles = []
         self.employers = []
         self.locations = []
