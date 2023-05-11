@@ -50,6 +50,15 @@ Choose one of the following jobs' url and put it to `CFD_ONLINE_JOBS_URL`:
 python desktopPi.py
 ```
 
+## Cron job to scheldue the screen on/off at morning/night
+Type `crontab -e` and put the following content at the end of the cronjob.
+```sh
+# Turn off screen at night time 23:30
+30 23 * * * DISPLAY=:0 xset dpms force off
+# Turn on screen at morning time 8:00
+00 08 * * * DISPLAY=:0 xset dpms force on
+```
+
 ## Demo
 ![May-06-20:13-36](https://user-images.githubusercontent.com/7792396/236623411-91aac2ff-78cb-44dd-8530-1f960a6cef1e.png)
 
